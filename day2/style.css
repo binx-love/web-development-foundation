@@ -1,0 +1,280 @@
+/* =========================
+   QuickNotes - Day 2
+   ========================= */
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: "Segoe UI", Arial, sans-serif;
+    background: #f4f6ff;
+    color: #25253a;
+    line-height: 1.6;
+}
+
+/* Header */
+
+header {
+    background: linear-gradient(135deg, #5b4bdb, #7c5ce0);
+    color: white;
+    text-align: center;
+    padding: 42px 20px 32px;
+    box-shadow: 0 4px 15px rgba(63, 55, 140, 0.25);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 38px;
+    letter-spacing: 1px;
+}
+
+header p {
+    margin: 8px 0 20px;
+    font-size: 17px;
+}
+
+/* Navigation */
+
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 16px;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    padding: 9px 18px;
+    border: 1px solid rgba(255, 255, 255, 0.4);
+    border-radius: 25px;
+    transition: all 0.3s ease;
+}
+
+nav a:hover {
+    background: white;
+    color: #5b4bdb;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 12px rgba(0, 0, 0, 0.15);
+}
+
+/* Main */
+
+main {
+    max-width: 1000px;
+    margin: 40px auto;
+    padding: 0 22px;
+}
+
+main > h2 {
+    color: #4036a3;
+    font-size: 30px;
+    margin-bottom: 8px;
+}
+
+main > p {
+    color: #606078;
+    margin-bottom: 30px;
+}
+
+/* Section cards */
+
+section {
+    background: white;
+    padding: 28px;
+    margin-bottom: 25px;
+    border-radius: 14px;
+    border: 1px solid #e6e4f4;
+    box-shadow: 0 8px 25px rgba(70, 61, 130, 0.08);
+}
+
+section h2,
+section h3 {
+    color: #4036a3;
+    margin-top: 0;
+}
+
+/* Features */
+
+.features {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+    gap: 18px;
+    padding: 0;
+    margin: 20px 0 0;
+    list-style: none;
+}
+
+.features li {
+    background: linear-gradient(145deg, #f8f7ff, #efedff);
+    padding: 22px;
+    min-height: 100px;
+    display: flex;
+    align-items: center;
+    border-radius: 12px;
+    border: 1px solid #ded9ff;
+    font-weight: 600;
+    color: #413b75;
+    transition: all 0.3s ease;
+}
+
+.features li:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 20px rgba(91, 75, 219, 0.15);
+}
+
+/* Table */
+
+table {
+    width: 100%;
+    border-collapse: separate;
+    border-spacing: 0;
+    margin-top: 18px;
+    border-radius: 10px;
+    overflow: hidden;
+    border: 1px solid #dddaf0;
+}
+
+th,
+td {
+    padding: 14px 16px;
+    text-align: left;
+    border-bottom: 1px solid #e5e3ef;
+}
+
+th {
+    background: #5b4bdb;
+    color: white;
+}
+
+tbody tr:last-child td {
+    border-bottom: none;
+}
+
+tbody tr:hover {
+    background: #f7f6ff;
+}
+
+/* Forms */
+
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+form label {
+    font-weight: 600;
+    color: #403b61;
+    margin-top: 6px;
+}
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 13px 14px;
+    border: 1px solid #d4d1e5;
+    border-radius: 8px;
+    background: #fafaff;
+    color: #25253a;
+    font-size: 16px;
+    font-family: inherit;
+    transition: all 0.25s ease;
+}
+
+form input:focus,
+form textarea:focus {
+    outline: none;
+    border-color: #6b5bdd;
+    box-shadow: 0 0 0 3px rgba(107, 91, 221, 0.12);
+    background: white;
+}
+
+form textarea {
+    min-height: 130px;
+    resize: vertical;
+}
+
+/* Buttons */
+
+button {
+    align-self: flex-start;
+    margin-top: 8px;
+    padding: 12px 24px;
+    border: none;
+    border-radius: 8px;
+    background: linear-gradient(135deg, #5b4bdb, #7659df);
+    color: white;
+    font-size: 15px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+button:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 7px 15px rgba(91, 75, 219, 0.25);
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 25px 20px;
+    color: #77758b;
+    font-size: 14px;
+}
+
+/* Mobile */
+
+@media (max-width: 600px) {
+
+    header {
+        padding: 28px 12px 24px;
+    }
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    header p {
+        font-size: 15px;
+    }
+
+    nav {
+        gap: 10px;
+    }
+
+    nav a {
+        padding: 8px 14px;
+    }
+
+    main {
+        margin: 25px auto;
+        padding: 0 12px;
+    }
+
+    main > h2 {
+        font-size: 25px;
+    }
+
+    section {
+        padding: 20px;
+    }
+
+    .features {
+        grid-template-columns: 1fr;
+    }
+
+    th,
+    td {
+        padding: 10px;
+        font-size: 14px;
+    }
+
+    button {
+        width: 100%;
+    }
+}
