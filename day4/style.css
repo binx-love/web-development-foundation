@@ -1,0 +1,157 @@
+:root {
+    --background: #f4f6ff;
+    --surface: #ffffff;
+    --text: #25253a;
+    --border: #d9d9e8;
+    --button: #5b4bdb;
+    --button-text: #ffffff;
+    --muted: #66667a;
+    --warning: #e67e22;
+    --over: #d63031;
+}
+
+body.dark {
+    --background: #181a24;
+    --surface: #252837;
+    --text: #f1f1f5;
+    --border: #414556;
+    --button: #8171e8;
+    --button-text: #ffffff;
+    --muted: #b8bac7;
+    --warning: #f5a623;
+    --over: #ff6b6b;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+
+    background: var(--background);
+    color: var(--text);
+
+    font-family: "Segoe UI", Arial, sans-serif;
+
+    transition: background-color 0.3s ease, color 0.3s ease;
+}
+
+main {
+    width: 100%;
+    max-width: 700px;
+    padding: 35px;
+
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: 16px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 25px;
+}
+
+label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 600;
+}
+
+textarea {
+    width: 100%;
+    min-height: 250px;
+    padding: 15px;
+
+    border: 1px solid var(--border);
+    border-radius: 10px;
+
+    background: var(--background);
+    color: var(--text);
+
+    font-family: inherit;
+    font-size: 16px;
+    line-height: 1.5;
+
+    resize: vertical;
+}
+
+textarea:focus {
+    outline: none;
+    border-color: var(--button);
+}
+
+.counters {
+    display: flex;
+    justify-content: space-between;
+    gap: 15px;
+
+    margin-top: 12px;
+}
+
+.counters p {
+    margin: 0;
+    color: var(--muted);
+}
+
+.warning {
+    color: var(--warning) !important;
+}
+
+.over {
+    color: var(--over) !important;
+    font-weight: bold;
+}
+
+.buttons {
+    display: flex;
+    gap: 12px;
+    margin-top: 25px;
+}
+
+button {
+    padding: 11px 20px;
+
+    border: none;
+    border-radius: 8px;
+
+    background: var(--button);
+    color: var(--button-text);
+
+    font-size: 15px;
+    font-weight: 600;
+
+    cursor: pointer;
+
+    transition: opacity 0.2s ease, transform 0.2s ease;
+}
+
+button:hover {
+    opacity: 0.9;
+    transform: translateY(-2px);
+}
+
+@media (max-width: 600px) {
+    main {
+        padding: 25px;
+    }
+
+    .counters {
+        flex-direction: column;
+    }
+
+    .buttons {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+}
